@@ -4,8 +4,12 @@ def FirstStep(a):
     for i in a:
         char=a[0:0]
         bwr=bwr+char
+        SecondStep(bwr)
     
     print(bwr)
+
+def SecondStep(b):
+    
           
           
           
