@@ -1,14 +1,21 @@
 def FirstStep(a):
-     
+    rotazioni=[]
     bwr=a
-    for i in a:
-        char=a[0:0]
-        bwr=bwr+char
-        SecondStep(bwr)
+    for i in range(len(a)-1):
+        char=bwr[0:1]
+        bwr=bwr[1:]+char
+        rotazioni.append(bwr)
+        
     
-    print(bwr)
+    print(rotazioni)
+    SecondStep(rotazioni)
 
 def SecondStep(b):
+
+    b.sort()
+    print(b)
+    
+
     
           
           
