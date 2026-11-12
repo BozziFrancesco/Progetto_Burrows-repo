@@ -1,32 +1,26 @@
 def FirstStep(a):
-    rotazioni=[]
-    bwr=a
-    for i in range(len(a)-1):
-        char=bwr[0:1]
-        bwr=bwr[1:]+char
+    rotazioni = []
+    rotazioni.append(a)
+    bwr = a
+    for i in range(len(a) - 1):
+        char = bwr[0:1]
+        bwr = bwr[1:] + char
         rotazioni.append(bwr)
         
-    
+    print("\n--------PRIMO STEP-------\n")
     print(rotazioni)
-    SecondStep(rotazioni)
+    return SecondStep(rotazioni)
 
 def SecondStep(b):
-
     b.sort()
+    print("\n--------SECONDO STEP-------\n")
     print(b)
-    
+    return ThirdStep(b)
 
-    
-          
-          
-          
+def ThirdStep(c):
+    trasformata = ""
+    for i in c:
+        trasformata = trasformata + i[-1]
 
-
-
-
-parola_iniziale=input("Che parola vuoi comprimere?") 
-parola_iniziale =  parola_iniziale + "$"
-FirstStep(parola_iniziale)
-
-
-
+    print("\n--------TERZO STEP-------\n")
+    return trasformata
